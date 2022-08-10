@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Key Detection</title>
+  <script type="text/javascript" src="https://www.cornify.com/js/cornify.js"></script>
+</head>
+<body>
+<script>
+  const arr = [];
+  const code = 'javas';
+
+  window.addEventListener("keyup", (e) => {
+    console.log(e.key);
+    arr.push(e.key);
+    arr.splice(-code.length - 1, arr.length - code.length);
+    if(arr.join('').includes(code)) {
+      console.log("Unicorn");
+      cornify_add();
+    }
+    console.log(arr);
+  })
+
+</script>
+</body>
+</html>
